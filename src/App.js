@@ -1,23 +1,60 @@
+import React, { useEffect, useState } from "react";
+import server from './mock-server'
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [isFetching, setIsFetching] = useState(true);
+  const [error, setError] = useState(null);
+  const [genres, setGenres] = useState([]);
+  const [songGroups, setSongGroups] = useState([]);
+
+  useEffect(() => {
+    fetchGenres();
+    fetchSongGroups();
+    setIsFetching(false);
+  }, []);
+
+  const fetchGenres = async () => {
+    try {
+      const response = await server.query(`
+      query Query {
+        genres
+      }
+    `)
+      setGenres(response.data.genres);
+    } catch (error) {
+      setError(error);
+    }
+  }
+
+  const fetchSongGroups = async () => {
+    try {
+      const response = await server.query(`
+      query Query {
+        songGroups {
+          year
+          songs {
+              title
+              artist
+              album
+              year
+              duration
+              genre
+              cover
+          }
+        }
+      }
+  `)
+      setSongGroups(response.data.songGroups);
+    } catch (error) {
+      setError(error);
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
     </div>
   );
 }
