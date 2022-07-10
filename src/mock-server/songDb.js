@@ -1,9 +1,9 @@
-[
+const songs = [
     {
         "title": "Kiss",
         "artist": "Colin",
         "album": "mechanism",
-        "year": 2022,
+        "year": 2021,
         "duration": "2",
         "genre": "Non Music",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -39,7 +39,7 @@
         "title": "Addicted to Love",
         "artist": "Irving",
         "album": "baboon",
-        "year": 2021,
+        "year": 2019,
         "duration": "7",
         "genre": "Funk",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -48,7 +48,7 @@
         "title": "Total Eclipse of the Heart",
         "artist": "Ardith",
         "album": "sister",
-        "year": 2021,
+        "year": 2022,
         "duration": "1",
         "genre": "Latin",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -66,7 +66,7 @@
         "title": "Big Bad John",
         "artist": "Gilda",
         "album": "need",
-        "year": 2021,
+        "year": 2019,
         "duration": "8",
         "genre": "Folk",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -84,7 +84,7 @@
         "title": "Sunshine Superman",
         "artist": "Trystan",
         "album": "lover",
-        "year": 2022,
+        "year": 2017,
         "duration": "4",
         "genre": "Blues",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -93,7 +93,7 @@
         "title": "The Way You Move",
         "artist": "Tomasa",
         "album": "safety",
-        "year": 2022,
+        "year": 2019,
         "duration": "6",
         "genre": "Latin",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -102,7 +102,7 @@
         "title": "My Love",
         "artist": "Grover",
         "album": "trash",
-        "year": 2021,
+        "year": 2017,
         "duration": "7",
         "genre": "Stage And Screen",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -120,7 +120,7 @@
         "title": "Lean On Me",
         "artist": "Oswald",
         "album": "vegetation",
-        "year": 2021,
+        "year": 2017,
         "duration": "8",
         "genre": "Rap",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -129,7 +129,7 @@
         "title": "Help Me",
         "artist": "Lexie",
         "album": "mail",
-        "year": 2022,
+        "year": 2017,
         "duration": "8",
         "genre": "Folk",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -147,7 +147,7 @@
         "title": "Pop Muzik",
         "artist": "Orion",
         "album": "killing",
-        "year": 2021,
+        "year": 2017,
         "duration": "1",
         "genre": "Rap",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -156,7 +156,7 @@
         "title": "Groovin'",
         "artist": "Johnathon",
         "album": "feng",
-        "year": 2022,
+        "year": 2019,
         "duration": "2",
         "genre": "Rap",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -210,7 +210,7 @@
         "title": "Hound Dog",
         "artist": "Cloyd",
         "album": "colonial",
-        "year": 2022,
+        "year": 2019,
         "duration": "9",
         "genre": "Country",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -219,7 +219,7 @@
         "title": "Disco Lady",
         "artist": "Daija",
         "album": "footprint",
-        "year": 2022,
+        "year": 2018,
         "duration": "8",
         "genre": "Rap",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -228,7 +228,7 @@
         "title": "Killing Me Softly With His Song",
         "artist": "Anabel",
         "album": "infarction",
-        "year": 2022,
+        "year": 2019,
         "duration": "9",
         "genre": "Electronic",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -237,7 +237,7 @@
         "title": "Roll With It",
         "artist": "Rogers",
         "album": "perspective",
-        "year": 2021,
+        "year": 2018,
         "duration": "7",
         "genre": "World",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -246,7 +246,7 @@
         "title": "All Night Long (All Night)",
         "artist": "Earnest",
         "album": "cation",
-        "year": 2021,
+        "year": 2018,
         "duration": "4",
         "genre": "World",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -255,7 +255,7 @@
         "title": "You've Lost That Lovin' Feelin'",
         "artist": "Vivienne",
         "album": "instrumentation",
-        "year": 2022,
+        "year": 2018,
         "duration": "2",
         "genre": "Pop",
         "cover": "https://loremflickr.com/640/480/fashion"
@@ -264,9 +264,23 @@
         "title": "Poker Face",
         "artist": "Justice",
         "album": "liability",
-        "year": 2021,
+        "year": 2018,
         "duration": "2",
         "genre": "World",
         "cover": "https://loremflickr.com/640/480/fashion"
     }
 ]
+
+export const genres = [
+    "World",
+    "Pop",
+    "Jazz",
+    "Metal",
+    "Classical",
+    "Hip Hop",
+    "Rap",
+    "Latin",
+    "Stage And Screen"
+]
+
+export default songs;
