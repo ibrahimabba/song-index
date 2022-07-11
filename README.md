@@ -18,7 +18,7 @@ graphql tools provides tools to mock a graphql server with schema and resolvers 
 
 Caching mechanism could be put in place to prevent refetching unchanged data, especially when the data grows in the future.
 
-Tests could be created for data fetching and the components such as buttons and the search component
+Unit tests could be created for data fetching and the components such as buttons and the search component
 
 
 
