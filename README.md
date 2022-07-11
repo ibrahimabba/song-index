@@ -24,7 +24,7 @@ Caching mechanism could be put in place to prevent refetching unchanged data, es
 
 Clone my repo
 ```bash
-git clone https://github.com/iamvucms/react-native-facebook-clone.git
+git clone https://github.com/ibrahimabba/song-index.git
 cd song-index
 ```
 Use the package manager yarn
