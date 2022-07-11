@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import server from './mock-server'
-import { Container, Cover, CoverContainer, GenreContainer, Hstack, Input, Song, SongAlbum, SongArtist, SongDuration, SongGenre, SongGroup, SongGroupContainer, SongGroupTitle, SongInfo, SongTitle, Button } from "./components/home-page";
+import { Container, GenreContainer, Input, SongGroupContainer, Button } from "./components/home-page";
+import SongGroup from "./components/home-page/SongGroup";
 
 function App() {
   const [isFetching, setIsFetching] = useState(true);
@@ -67,6 +68,15 @@ function App() {
   }
 
 
+  if (isFetching) {
+    return <Container style={{ alignItems: 'center', justifyContent: 'center' }}><h1>Loading...</h1></Container>
+  }
+
+  if (error) {
+    return <Container style={{ alignItems: 'center', justifyContent: 'center' }}><h1>Error: {error.message}</h1></Container>
+  }
+
+
   return (
     <Container>
       <Input type={"search"} placeholder={'Search Song'} value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
@@ -76,30 +86,7 @@ function App() {
         ))}
       </GenreContainer>
       <SongGroupContainer>
-        {songGroups.map(songGroup => {
-          return (
-            <SongGroup key={songGroup.year}>
-              {songGroup.songs.length > 0 && <SongGroupTitle>{songGroup.year}</SongGroupTitle>}
-              {songGroup.songs.length > 0 && songGroup.songs.map(song => (
-                <Song key={song.title}>
-                  <Hstack>
-                    <CoverContainer>
-                      <Cover src={song.cover} />
-                    </CoverContainer>
-                    <SongInfo>
-                      <SongTitle>{song.title}</SongTitle>
-                      <SongArtist>{song.artist}</SongArtist>
-                      <SongAlbum>{song.album}</SongAlbum>
-                      <SongDuration>{song.duration + ' ' + 'mins'}</SongDuration>
-                      <SongGenre>{song.genre}</SongGenre>
-                    </SongInfo>
-                  </Hstack>
-
-                </Song>
-              ))}
-            </SongGroup>
-          )
-        })}
+        {songGroups.map(songGroup => <SongGroup key={songGroup.year} songGroup={songGroup} />)}
       </SongGroupContainer>
 
     </Container>
