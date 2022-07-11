@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     fetchGenres();
-    if (searchQuery.length > 4) {
+    if (searchQuery.length > 0) {
       fetchSongGroups('', searchQuery);
     } else {
       fetchSongGroups('', searchQuery)
@@ -67,15 +67,9 @@ function App() {
     fetchSongGroups(genre)
   }
 
+  if (isFetching) return <Container style={{ alignItems: 'center', justifyContent: 'center' }}><h1>Loading...</h1></Container>
 
-  if (isFetching) {
-    return <Container style={{ alignItems: 'center', justifyContent: 'center' }}><h1>Loading...</h1></Container>
-  }
-
-  if (error) {
-    return <Container style={{ alignItems: 'center', justifyContent: 'center' }}><h1>Error: {error.message}</h1></Container>
-  }
-
+  if (error) return <Container style={{ alignItems: 'center', justifyContent: 'center' }}><h1>Error: {error.message}</h1></Container>
 
   return (
     <Container>

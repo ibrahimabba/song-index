@@ -15,7 +15,7 @@ export default function SongGroup({ songGroup }) {
                             <SongTitle>{song.title}</SongTitle>
                             <SongArtist>{song.artist}</SongArtist>
                             <SongAlbum>{song.album}</SongAlbum>
-                            <SongDuration>{song.duration + ' ' + 'mins'}</SongDuration>
+                            <SongDuration>{song.duration + ' mins'}</SongDuration>
                             <SongGenre>{song.genre}</SongGenre>
                         </SongInfo>
                     </Hstack>
