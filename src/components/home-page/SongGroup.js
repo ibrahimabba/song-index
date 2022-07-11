@@ -13,10 +13,10 @@ export default function SongGroup({ songGroup }) {
                         </CoverContainer>
                         <SongInfo>
                             <SongTitle>{song.title}</SongTitle>
-                            <SongArtist>{song.artist}</SongArtist>
-                            <SongAlbum>{song.album}</SongAlbum>
-                            <SongDuration>{song.duration + ' mins'}</SongDuration>
-                            <SongGenre>{song.genre}</SongGenre>
+                            <SongArtist>Artist: {song.artist}</SongArtist>
+                            <SongAlbum>Album: {song.album}</SongAlbum>
+                            <SongDuration>length: {song.duration + ' mins'}</SongDuration>
+                            <SongGenre>Genre: {song.genre}</SongGenre>
                         </SongInfo>
                     </Hstack>
 

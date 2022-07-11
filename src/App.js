@@ -73,7 +73,7 @@ function App() {
 
   return (
     <Container>
-      <Input type={"search"} placeholder={'Search Song'} value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+      <Input type={"search"} placeholder={'Search Song by title, artist or album'} value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
       <GenreContainer>
         {genres.map(genre => (
           <Button style={{ color: selectedGenre === genre ? 'green' : 'white' }} key={genre} onClick={() => handleChooseGenre(genre)} >{genre}</Button>

@@ -20,7 +20,7 @@ const resolvers = {
                 console.log(songsThroughtFilter)
             }
             if (search !== '') {
-                songsThroughtFilter = searchItems(songs, search, 'title')
+                songsThroughtFilter = searchItems(songs, search, ['title', 'artist', 'album'])
             }
             // for each year, create a songGroup
             years.forEach(year => {
