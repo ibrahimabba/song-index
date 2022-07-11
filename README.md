@@ -7,7 +7,7 @@ The app provides an archive of songs, and allows the user to search and filter s
 
 ## Built With
 
-The project is built with Reactjs,  Graphql and graphql tools
+The project is built with Reactjs, emotionjs, Graphql and graphql tools
 
 ## Decisions
 
