@@ -3,7 +3,8 @@
 This simple Reactjs project aim to showcase important front-end skills such as data fetching, error handling and data filtering
 skills with Graphql mock server and mock data.
 
-The app provides an archive of songs, and allows the user to search and filter songs.
+The app provides an archive of songs, and allows the user to search and filter songs, search could be done across multiple
+fields of data such as title, artist and album.
 
 ## Built With
 
