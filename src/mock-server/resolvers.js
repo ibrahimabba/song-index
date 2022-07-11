@@ -20,6 +20,7 @@ const resolvers = {
                 console.log(songsThroughtFilter)
             }
             if (search !== '') {
+                // search across multiple fields
                 songsThroughtFilter = searchItems(songs, search, ['title', 'artist', 'album'])
             }
             // for each year, create a songGroup
