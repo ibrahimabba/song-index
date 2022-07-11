@@ -1,18 +1,34 @@
 import songs, { genres } from './songDb'
+import { searchItems } from '../utils'
 
 const resolvers = {
     Query: {
         genres: () => genres,
-        songGroups: () => {
-
-            // get distinct years from songs
-            const years = [...new Set(songs.map(song => song.year))]
+        songGroups: (_, args) => {
+            const { genre, search } = args;
+            // get distinct years from songs and sort them in ascending order
+            const years = [...new Set(songs.map(song => song.year))].sort((a, b) => b - a)
 
             const songGroups = []
 
+            let songsThroughtFilter = songs
+
+
+
+            if (genre !== '') {
+                songsThroughtFilter = songs.filter(song => song.genre === genre)
+                console.log(songsThroughtFilter)
+            }
+            if (search !== '') {
+                songsThroughtFilter = searchItems(songs, search, 'title')
+            }
             // for each year, create a songGroup
             years.forEach(year => {
-                const songsForYear = songs.filter(song => song.year === year)
+                const songsForYear = songsThroughtFilter.filter(song => {
+
+                    return song.year === year
+
+                })
                 songGroups.push({
                     year,
                     songs: songsForYear

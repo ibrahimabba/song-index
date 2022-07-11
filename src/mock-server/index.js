@@ -1,10 +1,16 @@
 import { mockServer } from '@graphql-tools/mock';
-import typeDefs from './schema';
+import { addResolversToSchema } from '@graphql-tools/schema';
+import schemaString from './schema';
 import resolvers from './resolvers';
 import { buildSchema } from 'graphql'
 
-const schema = buildSchema(typeDefs)
+const schema = buildSchema(schemaString)
 
-const server = mockServer(schema, resolvers)
+const schemaWithResolvers = addResolversToSchema({
+    schema,
+    resolvers
+})
+
+const server = mockServer(schemaWithResolvers, {}, true)
 
 export default server;

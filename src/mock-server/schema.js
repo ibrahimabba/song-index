@@ -17,7 +17,7 @@ const schema = `
 
     type Query {
         genres: [String!]
-        songGroups: [SongGroup!]
+        songGroups(genre: String, search: String): [SongGroup!]
     }
 `;
 
