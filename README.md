@@ -6,6 +6,8 @@ skills with Graphql mock server and mock data.
 The app provides an archive of songs, and allows the user to search and filter songs, search could be done across multiple
 fields of data such as title, artist and album.
 
+ [You can view the live app here](https://wondrous-souffle-6ae51c.netlify.app/).
+ 
 ## Built With
 
 The project is built with Reactjs, emotionjs, Graphql and graphql tools
