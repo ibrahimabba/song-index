@@ -13,11 +13,7 @@ function App() {
 
   useEffect(() => {
     fetchGenres();
-    if (searchQuery.length > 0) {
-      fetchSongGroups('', searchQuery);
-    } else {
-      fetchSongGroups('', searchQuery)
-    }
+    fetchSongGroups('', searchQuery)
     setIsFetching(false);
   }, [searchQuery]);
 
